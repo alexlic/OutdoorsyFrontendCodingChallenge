@@ -2,12 +2,12 @@ import React from 'react'
 
 export default ({ name, onClick, className, children = null }) => {
   return (
-    <buttton
+    <button
       name={name}
       onClick={onClick}
       className={className}
     >
       {children}
-    </buttton>
+    </button>
   )
 }

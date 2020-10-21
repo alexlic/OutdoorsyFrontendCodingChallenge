@@ -6,11 +6,12 @@ import Button from '../components/Button'
 
 export default function Home () {
   const [list, setList] = useState([])
+  const [limitOfItems, setLimitOfItems] = useState(8)
 
   const fetchOptions = {
     'filter[type]': 'camper-van',
     address: 'san francisco',
-    'page[limit]': 8
+    'page[limit]': limitOfItems
   }
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Home () {
   }, [])
 
   const handleOnClick = () => {
-    fetchOptions['page[limit]'] += 8
+    setLimitOfItems(limitOfItems + 8)
     fetchList(fetchOptions)
       .then(({ data: { data } }) => setList(data))
       .catch(err => console.error('error fetching rental list: ', err))
