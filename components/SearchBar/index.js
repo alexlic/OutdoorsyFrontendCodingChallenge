@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
 import Button from '../Button'
 
-function SearchBar () {
+function SearchBar ({ onClick, onChange }) {
   return (
     <div className='search-bar'>
       <div>
@@ -9,12 +8,12 @@ function SearchBar () {
       </div>
       <div className='form-row'>
         <div className='col-md-4'>
-          <input type='text' className='form-control' />
+          <input type='text' name='filterInput' className='form-control' onChange={onChange} />
         </div>
         <div className='col-md-2'>
           <Button
             name='filter'
-            onClick={() => {}}
+            onClick={onClick}
             className='btn btn-success search-bar_button'
           >
             Filter

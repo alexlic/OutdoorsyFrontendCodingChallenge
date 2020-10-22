@@ -1,6 +1,7 @@
 import React from 'react'
+import Link from 'next/link'
 
-export default ({ imageURL, location, description, price, score, type }) => {
+export default ({ id, imageURL, location, description, price, score, type }) => {
   const cardHeader = `${type} • ${location}`.toUpperCase()
 
   const generateRatingStarts = (score) => {
@@ -16,21 +17,23 @@ export default ({ imageURL, location, description, price, score, type }) => {
   const ratingStars = generateRatingStarts(score)
 
   return (
-    <div className='row card-row col-md-12'>
-      <div className='card_image-section'>
-        <img src={imageURL} alt={description} className='card-image' />
-      </div>
-      <div className='card_info-section'>
-        <p className='card_header'>{cardHeader}</p>
-        <p className='card_description'>{description.toUpperCase()}</p>
-        <div className='card-details'>
-          <p>{`$ ${price}`}</p>
-          <div className='card_score-stars'>
-            {ratingStars}
-          </div>
-          <p className='card_score-number'>{`(${score})`}</p>
+    <Link href='/rental/[rental]' as={`/rental/${id}`}>
+      <a className='row card-row col-md-12'>
+        <div className='card_image-section'>
+          <img src={imageURL} alt={description} className='card-image' />
         </div>
-      </div>
-    </div>
+        <div className='card_info-section'>
+          <p className='card_header'>{cardHeader}</p>
+          <p className='card_description'>{description.toUpperCase()}</p>
+          <div className='card-details'>
+            <p>{`$ ${price}`}</p>
+            <div className='card_score-stars'>
+              {ratingStars}
+            </div>
+            <p className='card_score-number'>{`(${score})`}</p>
+          </div>
+        </div>
+      </a>
+    </Link>
   )
 }

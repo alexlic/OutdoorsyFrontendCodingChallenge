@@ -27,6 +27,7 @@
 }
 
 .card-row {
+  text-decoration: none;
   height: 210px;
   width: 600px;
   padding: 0;
@@ -47,6 +48,11 @@
   border: none;
   height: 210px;
   width: 600px;
+}
+
+.card-item:hover {
+  box-shadow: 5px 5px 5px gray;
+  cursor: pointer;
 }
 
 .card_header {
@@ -88,4 +94,10 @@
 
 .card_score-number {
   color: gray;
+}
+
+.load-more_section {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
