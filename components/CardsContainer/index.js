@@ -3,7 +3,7 @@ import Card from '../Card'
 
 export default function ({ list }) {
   return (
-    <div>
+    <ul className='card_container'>
       {
         list.map(item => {
           const {
@@ -16,18 +16,19 @@ export default function ({ list }) {
           } = item.attributes
           const fullLocation = `${location.city}, ${location.state}`
           return (
-            <Card
-              key={item.id}
-              imageURL={imageURL}
-              location={fullLocation}
-              description={description}
-              price={price}
-              score={score}
-              type={vehicleType}
-            />
+            <li key={item.id} className='card-item'>
+              <Card
+                imageURL={imageURL}
+                location={fullLocation}
+                description={description}
+                price={price}
+                score={score}
+                type={vehicleType}
+              />
+            </li>
           )
         })
       }
-    </div>
+    </ul>
   )
 }

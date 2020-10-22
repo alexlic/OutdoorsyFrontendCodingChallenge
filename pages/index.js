@@ -29,7 +29,7 @@ export default function Home () {
 
   return (
     <div className='max-w-screen-xl mx-auto mt-8'>
-      <h1 className='text-5xl font-black text-gray-600'>Campervans</h1>
+      <h1 className='main-title'>Campervans</h1>
       <section>
         <SearchBar />
       </section>
@@ -40,7 +40,7 @@ export default function Home () {
         <Button
           name='loadMore'
           onClick={handleOnClick}
-          className=''
+          className='btn btn-success'
         >
           Load More
         </Button>

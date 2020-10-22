@@ -3,3 +3,89 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.main-title {
+  color: black;
+  font-weight: 700;
+}
+.search-bar_title {
+  font-weight: 500;
+  color: black;
+  margin: 1rem 0 .5rem;
+}
+
+.search-bar_button {
+  width: 60%;
+}
+
+.search-bar {
+  margin-bottom: 3rem;
+}
+
+.card_image-section {
+  width: 50%;
+}
+
+.card-row {
+  height: 210px;
+  width: 600px;
+  padding: 0;
+}
+
+.card-image {
+  height: 210px;
+  width: 600px;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.card-item {
+  border: none;
+  height: 210px;
+  width: 600px;
+}
+
+.card_header {
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card_description {
+  font-size: 12px;
+  font-weight: 600;
+  overflow-wrap: break-word;
+}
+
+.score_blank-star,
+.score_yellow-star {
+  color: gold;
+}
+
+.card_info-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2rem 1rem;
+}
+
+.card-details {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4rem;
+  display: flex;
+}
+
+.card_score-stars {
+  padding-left: 1rem;
+  padding-right: .5rem;
+}
+
+.card_score-number {
+  color: gray;
+}
