@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "eslint --ext .js,.jsx .",
-    "lint:fix": "eslint --ext .js,.jsx . --fix"
+    "lint:fix": "eslint --ext .js,.jsx . --fix",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "axios": "^0.20.0",
