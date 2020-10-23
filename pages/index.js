@@ -32,6 +32,7 @@ export default function Home () {
 
   const handleOnClick = () => {
     limitOfItems.current += 8
+    fetchOptions['page[limit]'] = limitOfItems.current
     fetchList(fetchOptions)
       .then(({ data: { data } }) => {
         setList(data)
