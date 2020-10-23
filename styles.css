@@ -22,11 +22,20 @@
   margin-bottom: 3rem;
 }
 
+.search-bar_input {
+  width: 35%;
+}
+
+.sear-bar_button {
+  margin-left: .2rem;
+  width: 15%;
+}
+
 .card_image-section {
   width: 50%;
 }
 
-.card-row {
+.card-item .card-row {
   text-decoration: none;
   height: 210px;
   width: 600px;
@@ -46,8 +55,6 @@
 
 .card-item {
   border: none;
-  height: 210px;
-  width: 600px;
 }
 
 .card-item:hover {
@@ -65,6 +72,7 @@
 .card_description {
   font-size: 12px;
   font-weight: 600;
+  color: black;
   overflow-wrap: break-word;
 }
 
@@ -85,6 +93,7 @@
   font-weight: 600;
   margin-top: 4rem;
   display: flex;
+  color: black;
 }
 
 .card_score-stars {
@@ -100,4 +109,171 @@
   margin-top: 4rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.rental-page .image-viewer_container {
+  padding: 0;
+  margin: 0;
+  max-height: 25rem;
+}
+
+.image-viewer_container .main-image {
+  min-width: 50%;
+  max-height: 25rem;
+  padding-left: 0;
+}
+
+.image-viewer_container .secondary-image {
+  width: 50%;
+  max-height: 25rem;
+  padding-right: 0;
+}
+
+.rental-price,
+.profile-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.rental-price {
+  text-align: center;
+  padding-top: 1.2rem;
+  font-size: 1rem;
+  background-color: green;
+  color: white;
+  margin-left: 20rem;
+}
+
+.rental-details {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.profile-name {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 1rem;
+  padding-top: .5rem;
+}
+
+.rental_user-info {
+  display: flex;
+}
+
+.rental_location_info {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.rental_vehicle-info {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 1150px) {
+  .card_container {
+    display: block;
+    margin-left: 1rem;
+  }
+  .card-item {
+    margin-bottom: 3rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .image-viewer_container .secondary-image {
+    display: none;
+  }
+  .image-viewer_container .main-image {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  .rental-price {
+    margin-left: 10rem;
+  }
+
+  .search-bar_input {
+    width: 50%;
+  }
+  
+  .sear-bar_button {
+    width: 25%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-item .card-row {
+    display: inline-block;
+    flex-wrap: nowrap;
+    margin: 0;
+    height: auto;
+  }
+  .card_container {
+    margin-left: 0;
+  }
+
+  .card_info-section,
+  .card_image-section {
+    width: 100%;
+  }
+  .card-image {
+    height: 20rem;
+  }
+
+  .card_description,
+  .card-details {
+    margin: 0;
+  }
+  .card-item {
+    margin-bottom: 1rem;
+  }
+  .card_header,
+  .card_description,
+  .card-details {
+    font-size: 16px;
+  }
+  .search-bar {
+    min-width: 100%;
+  }
+  .search-bar .form-row {
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  .search-bar_input {
+    min-width: 30rem;
+  }
+  .sear-bar_button {
+    min-width: 8rem;
+  }
+  .load-more_section {
+    text-align: right;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .rental-price {
+    margin-top: -4.5rem;
+    margin-left: 5rem;
+    z-index: 2;
+  }
+  .load-more_section {
+    text-align: right;
+  }
+}
+
+@media (max-width: 320px) {
+  .rental-price {
+    margin-left: 2rem;
+  }
+  .load-more_section {
+    text-align: right;
+  }
 }

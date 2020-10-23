@@ -69,7 +69,7 @@ export default function Home () {
   }
 
   return (
-    <div className='max-w-screen-xl mx-auto mt-8'>
+    <div className='container'>
       <h1 className='main-title'>Campervans</h1>
       <section>
         <SearchBar

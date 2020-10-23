@@ -7,10 +7,10 @@ function SearchBar ({ onClick, onChange }) {
         <p className='search-bar_title'>Filter</p>
       </div>
       <div className='form-row'>
-        <div className='col-md-4'>
+        <div className='search-bar_input'>
           <input type='text' name='filterInput' className='form-control' onChange={onChange} />
         </div>
-        <div className='col-md-2'>
+        <div className='sear-bar_button'>
           <Button
             name='filter'
             onClick={onClick}
